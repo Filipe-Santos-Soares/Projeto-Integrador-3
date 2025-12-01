@@ -40,6 +40,14 @@ class Aluguel(models.Model):
 
     def __str__(self):
         return self.id_aluguel
+    
+
+class funcionario(models.Model):
+    id_funcionario = models.AutoField(primary_key=True)
+    nome_funcionario = models.CharField(max_length=150)
+
+
+
 
 
 

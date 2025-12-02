@@ -2,8 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
 class PerfilCliente(models.Model):
-    id_cliente = models.AutoField(primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     #user_id = models.ForeignKey(8888, on_delete = models.CASCADE)
     cnh = models.CharField(max_length=11)
     telefone = models.CharField(max_length=13)

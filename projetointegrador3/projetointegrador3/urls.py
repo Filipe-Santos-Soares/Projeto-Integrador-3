@@ -20,6 +20,7 @@ from rest_framework.routers import DefaultRouter
 from concessionaria.views import *
 
 router = DefaultRouter()
+router.register(r'user', UserViewSet)
 router.register(r'perfis-cliente', PerfilClienteViewSet)
 router.register(r'carros', CarroViewSet)
 router.register(r'alugueis', AluguelViewSet)

@@ -5,7 +5,7 @@ from django.contrib.auth.models import User,Group
 
 class PerfilCliente(models.Model):
     id_usuario = models.AutoField(primary_key=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="perfil")
     cnh = models.CharField(max_length=11, unique=True)
     telefone = models.CharField(max_length=13)
     endereco = models.TextField()
@@ -28,13 +28,13 @@ class Carro(models.Model):
     status = models.CharField(choices=carro_status, default='Livre')
 
     def __str__(self):
-        return self.id_carro
+        return str(self.id_carro)
 
 class Aluguel(models.Model):
     id_aluguel = models.AutoField(primary_key=True)
-    perfil_cliente_id = models.ForeignKey(PerfilCliente, on_delete= models.CASCADE)
-    carro_id = models.ForeignKey(Carro, on_delete=models.CASCADE)
-    funcionario = models.ForeignKey(User, on_delete=models.CASCADE, related_name=("Alugueis_registrados"))
+    perfil_cliente_id = models.ForeignKey(PerfilCliente, on_delete= models.CASCADE, related_name="alugueis")
+    carro_id = models.ForeignKey(Carro, on_delete=models.CASCADE, related_name="alugueis")
+    funcionario = models.ForeignKey(User, on_delete=models.CASCADE, related_name=("alugueis_registrados"))
     data_inicio = models.DateField()
     data_fim = models.DateField()
     valor = models.DecimalField(max_digits=5,decimal_places=2)

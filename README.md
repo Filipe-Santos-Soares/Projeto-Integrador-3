@@ -23,7 +23,8 @@ O propósito desta API RESTful, desenvolvida em Django e Django REST Framework, 
 Siga os passos abaixo para configurar o ambiente local.
 1. **Clone o repositório:**
 ```bash
-mudar essa area
+git clone https://github.com/Filipe-Santos-Soares/Projeto-Integrador-3.git
+cd projetointegrador3
 ```
 2. **Crie um ambiente virtual:**
 ```bash

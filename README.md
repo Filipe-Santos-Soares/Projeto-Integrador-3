@@ -1,6 +1,6 @@
 # API Projeto Django  
 [![Python 3.13.5](https://img.shields.io/badge/Python-3.13.5-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![Django 5.0.3](https://img.shields.io/badge/Django-5.0.3-092E20?style=flat&logo=django&logoColor=white)](https://docs.djangoproject.com/en/5.0/)
+[![Django 5.2.8](https://img.shields.io/badge/Django-5.2.8-092E20?style=flat&logo=django&logoColor=white)](https://docs.djangoproject.com/en/6.0/)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat&logo=sqlite&logoColor=white)  
 
 ## Visão Geral

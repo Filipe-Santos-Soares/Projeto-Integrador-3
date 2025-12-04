@@ -1,0 +1,45 @@
+# API Projeto Django  
+[![Python 3.13.5](https://img.shields.io/badge/Python-3.13.5-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![Django 5.0.3](https://img.shields.io/badge/Django-5.0.3-092E20?style=flat&logo=django&logoColor=white)](https://docs.djangoproject.com/en/5.0/)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat&logo=sqlite&logoColor=white)  
+
+## Visão Geral
+Este projeto visa resolver o desafio da empresa fictícia EasyCar de informatizar seu processo de aluguel de veículos. Atualmente, todos os registros de clientes, carros e contratos são realizados de forma manual, resultando em dificuldades de controle e consulta de informações.
+
+O propósito desta API RESTful, desenvolvida em Django e Django REST Framework, é substituir essa operação manual por um sistema digital seguro e centralizado, permitindo o gerenciamento eficiente de perfis de clientes, carros e contratos de aluguel.
+
+## Pacotes Utilizados
+
+|Pacote|Versão|Descrição|
+|:---|:---|:---|
+|Django|5.2.8|Framework web principal|
+|djangorestframework|latest|Toolkit para construção de APIs REST|
+|django-filters|latest|Ferramenta para criação de formulários de filtro|
+|drf-spectacular|latest|Geracão automética de documentação Swagger|
+
+## Estrutura do Projeto
+
+## Configuração do Ambiente
+Siga os passos abaixo para configurar o ambiente local.
+1. **Clone o repositório:**
+```bash
+mudar essa area
+```
+2. **Crie um ambiente virtual:**
+```bash
+python -m venv AmbienteVirtual
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
+3. **Instale as dependências:**
+```bash
+pip install -r requirements.txt
+```
+4. **Aplique as migrações e inicie o servidor:**
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+
+## Modelo de dados (MER + DER)
+[![Modelos do Banco de Dados](https://img.shields.io/badge/Modelos%20do%20Banco%20de%20Dados-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MuriloLiraGoncalves/BancodeDados_DjangoProjeto3/blob/main/README.md)

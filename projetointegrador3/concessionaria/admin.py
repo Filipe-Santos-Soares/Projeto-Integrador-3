@@ -16,3 +16,4 @@ class CarroAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Token)
+

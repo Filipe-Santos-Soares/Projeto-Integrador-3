@@ -20,6 +20,37 @@ O propósito desta API RESTful, desenvolvida em Django e Django REST Framework, 
 
 ## Estrutura do Projeto
 
+```
+Projeto-Integrador-3/
+├──README.md
+├──Requirements.txt
+├──Projeto integrador - Diego.pdf
+├──projetointegrador3/
+│   ├──concessionaria/     # App
+│   │   ├──__init__.py
+│   │   ├──admin.py
+│   │   ├──apps.py
+│   │   ├──models.py       # Banco de dados em sqlite
+│   │   ├──serializers.py
+│   │   ├──tests.py
+│   │   └──views.py
+│   ├──projetointegrador3/
+│   │   ├──__init__.py
+│   │   ├──asgi.py
+│   │   ├──settings.py     # Configurações globais
+│   │   ├──urls.py         # Rotas principais
+│   │   └──wsgi.py
+│   ├──db.sqlite3
+│   └──manage.py
+```
+
+## Diagrama de Banco de Dados (MER + DER)
+Modelo conceitual e modelo relacional abaixo:  
+[![Modelos do Banco de Dados](https://img.shields.io/badge/Modelos%20do%20Banco%20de%20Dados-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MuriloLiraGoncalves/BancodeDados_DjangoProjeto3/blob/main/README.md)
+
+## Documentação da API
+
+
 ## Configuração do Ambiente
 Siga os passos abaixo para configurar o ambiente local.
 1. **Clone o repositório:**
@@ -44,5 +75,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Modelo de dados (MER + DER)
-[![Modelos do Banco de Dados](https://img.shields.io/badge/Modelos%20do%20Banco%20de%20Dados-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MuriloLiraGoncalves/BancodeDados_DjangoProjeto3/blob/main/README.md)
+

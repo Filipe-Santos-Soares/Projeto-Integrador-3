@@ -39,6 +39,7 @@ pip install -r requirements.txt
 4. **Aplique as migrações e inicie o servidor:**
 ```bash
 cd projetointegrador3
+python manage.py makemigrate
 python manage.py migrate
 python manage.py runserver
 ```

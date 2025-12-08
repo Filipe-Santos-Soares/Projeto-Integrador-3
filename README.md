@@ -29,8 +29,8 @@ git clone https://github.com/Filipe-Santos-Soares/Projeto-Integrador-3.git
 2. **Crie um ambiente virtual:**
 ```bash
 python -m venv AmbienteVirtual
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+source AmbienteVirtual/bin/activate  # Linux/Mac
+AmbienteVirtual\Scripts\activate     # Windows
 ```
 3. **Instale as dependências:**
 ```bash

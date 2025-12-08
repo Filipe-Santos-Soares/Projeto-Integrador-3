@@ -33,4 +33,4 @@ if not User.objects.filter(username='$DJANGO_SUPERUSER_USERNAME').exists():
 
 # Inicia o Gunicorn
 echo "Iniciando Gunicorn..."
-gunicorn ecommerce.wsgi:application --bind 0.0.0.0:$PORT
+gunicorn projetointegrador3.wsgi:application --bind 0.0.0.0:$PORT

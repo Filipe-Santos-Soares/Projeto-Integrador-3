@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import inspect
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'concessionaria',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +138,48 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication', 
     ],
+
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
     
+
+}
+
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'API CONCESSIONÁRIA',
+    'DESCRIPTION' :  inspect.cleandoc("""
+    ## Bem-vindo à API CONCESSIONÁRIA!
+    - **Listar Usuario**   ('GET /api/user/') sem autorização
+    - **Listar Usuario**   ('POST /api/user/') com autorização
+                                      
+    - **Listar clientes** ('GET /api/perfis-cliente/') sem autorização
+    - **Listar clientes** ('POST /api/perfis-cliente/') com autorização
+    
+    - **Listar carros** ('GET /api/carros/') sem autorização  
+    - **Listar carros** ('POST /api/carros/') com autorização  
+    
+    - **Listar alugueis** ('GET /api/alugueis/') sem autorização                               
+    - **Listar alugueis** ('POST /api/alugueis/') com autorização                               
+    '''
+    ### Autenticação
+    Use o endpoint '/api/token' para obter o seu token e inclua no cabecalho:
+        Authorization: Token <sua_chave>
+    '''
+
+"""),
+    'Version':'1.0.0',
+    'SERVE_INCLUDE_SCHEMA' : False,
+    'SECURITY': [{'TokenAuth': []}],
+    'COMPONENTS':{
+        'securitySchemes':{
+            'TokenAuth':{
+                'type': 'apiKey',
+                'in' : 'header',
+                'name': 'Authorization',
+                'description': 'Use o formato : Token <sua_chave>',
+            }
+        }
+    } 
+
 
 }

@@ -15,7 +15,7 @@ O propósito desta API RESTful, desenvolvida em Django e Django REST Framework, 
 |Django|5.2.8|Framework web principal|
 |djangorestframework|latest|Toolkit para construção de APIs REST|
 |django-filters|latest|Ferramenta para criação de formulários de filtro|
-|drf-spectacular|latest|Geracão automética de documentação Swagger|
+|drf-spectacular|latest|Geração automática de documentação Swagger|
 |requests|latest|Fazer requisições HTTP|
 
 ## Estrutura do Projeto

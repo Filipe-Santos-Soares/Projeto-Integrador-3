@@ -49,7 +49,10 @@ Modelo conceitual e modelo relacional abaixo:
 [![Modelos do Banco de Dados](https://img.shields.io/badge/Modelos%20do%20Banco%20de%20Dados-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MuriloLiraGoncalves/BancodeDados_DjangoProjeto3/blob/main/README.md)
 
 ## Documentação da API
-
+A documentação interativa está disponível em:  
+[/api/docs/(Swagger UI)](http://localhost:8000/api/docs/)  
+[/api/redoc/(ReDoc)](http://localhost:8000/api/redoc/)  
+Observação: É necessário iniciar o servidor antes de ver a documentação
 
 ## Configuração do Ambiente
 Siga os passos abaixo para configurar o ambiente local.

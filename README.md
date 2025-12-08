@@ -25,7 +25,6 @@ Siga os passos abaixo para configurar o ambiente local.
 1. **Clone o repositório:**
 ```bash
 git clone https://github.com/Filipe-Santos-Soares/Projeto-Integrador-3.git
-cd projetointegrador3
 ```
 2. **Crie um ambiente virtual:**
 ```bash
@@ -39,6 +38,7 @@ pip install -r requirements.txt
 ```
 4. **Aplique as migrações e inicie o servidor:**
 ```bash
+cd projetointegrador3
 python manage.py migrate
 python manage.py runserver
 ```

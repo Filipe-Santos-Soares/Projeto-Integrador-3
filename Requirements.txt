@@ -4,3 +4,4 @@ djangorestframework
 requests
 pip 
 drf-spectacular[sidecar]
+drf-spectacular[swagger-ui]

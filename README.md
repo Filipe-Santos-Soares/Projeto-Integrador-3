@@ -3,6 +3,15 @@
 [![Django 5.2.8](https://img.shields.io/badge/Django-5.2.8-092E20?style=flat&logo=django&logoColor=white)](https://docs.djangoproject.com/en/6.0/)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat&logo=sqlite&logoColor=white)  
 
+## Sumário
+* [Visão Geral](#visão-geral)
+* [Pacotes Utilizados](#pacotes-utilizados)
+* [Estrutura do Projeto](#estrutura-do-projeto)
+* [Diagrama de Banco de Dados (MER + DER)](#diagrama-de-banco-de-dados-mer--der)
+* [Documentação da API](#documentação-da-api)
+* [Configuração do Ambiente](#configuração-do-ambiente)
+* [Deploy (Render)](#deploy-render)
+
 ## Visão Geral
 Este projeto visa resolver o desafio da empresa fictícia EasyCar de informatizar seu processo de aluguel de veículos. Atualmente, todos os registros de clientes, carros e contratos são realizados de forma manual, resultando em dificuldades de controle e consulta de informações.
 

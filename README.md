@@ -17,6 +17,7 @@ O propósito desta API RESTful, desenvolvida em Django e Django REST Framework, 
 |django-filters|latest|Ferramenta para criação de formulários de filtro|
 |drf-spectacular|latest|Geração automática de documentação Swagger|
 |requests|latest|Fazer requisições HTTP|
+|gunicorn|latest|Permite a aplicação web|
 
 ## Estrutura do Projeto
 
@@ -24,29 +25,30 @@ O propósito desta API RESTful, desenvolvida em Django e Django REST Framework, 
 Projeto-Integrador-3/
 ├──README.md
 ├──Requirements.txt
-├──Projeto integrador - Diego.pdf
-└──projetointegrador3/
-    ├──concessionaria/     # App
-    │   ├──__init__.py
-    │   ├──admin.py
-    │   ├──apps.py
-    │   ├──models.py       # Banco de dados em sqlite
-    │   ├──serializers.py
-    │   ├──tests.py
-    │   └──views.py
-    ├──projetointegrador3/
-    │   ├──__init__.py
-    │   ├──asgi.py
-    │   ├──settings.py     # Configurações globais
-    │   ├──urls.py         # Rotas principais
-    │   └──wsgi.py
-    ├──db.sqlite3
-    └──manage.py
+├──Projeto integrador - Diego.pdf # Arquivo de instruções do projeto integrador
+├──concessionaria/     # App
+│   ├──__init__.py
+│   ├──admin.py
+│   ├──apps.py
+│   ├──models.py       # Banco de dados em sqlite
+│   ├──serializers.py
+│   ├──tests.py
+│   └──views.py
+├──projetointegrador3/
+│   ├──__init__.py
+│   ├──asgi.py
+│   ├──settings.py     # Configurações globais
+│   ├──urls.py         # Rotas principais
+│   └──wsgi.py
+├──db.sqlite3
+├──bash.sh             # Inicia o deploy do Django no Render
+└──manage.py
 ```
 
 ## Diagrama de Banco de Dados (MER + DER)
 Modelo conceitual e modelo relacional abaixo:  
-[![Modelos do Banco de Dados](https://img.shields.io/badge/Modelos%20do%20Banco%20de%20Dados-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MuriloLiraGoncalves/BancodeDados_DjangoProjeto3/blob/main/README.md)
+[![Modelos do Banco de Dados](https://img.shields.io/badge/Modelos%20do%20Banco%20de%20Dados-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MuriloLiraGoncalves/BancodeDados_DjangoProjeto3/blob/main/README.md)  
+Principais entidades: User, PerfilCliente, Carro e Aluguel
 
 ## Documentação da API
 A documentação interativa está disponível em:  
@@ -72,10 +74,17 @@ pip install -r requirements.txt
 ```
 4. **Aplique as migrações e inicie o servidor:**
 ```bash
-cd projetointegrador3
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
 
+## Deploy (Render)
+
+Links para a aplicação:  
+1. [dashboard.render](https://dashboard.render.com/web/srv-d4rhg1ali9vc73a2fc80)  
+1. [admin/](https://projetointegrador3-cnlp.onrender.com/admin/)  
+1. [api/](https://projetointegrador3-cnlp.onrender.com/api/)   
+1. [api/docs/](https://projetointegrador3-cnlp.onrender.com/api/docs/)  
+1. [api/redoc/](https://projetointegrador3-cnlp.onrender.com/api/redoc/)
 

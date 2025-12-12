@@ -116,10 +116,6 @@ def historico_cliente(request):
 @login_required
 @user_passes_test(is_funcionario)
 def historico_perfil(request, pk):
-    """
-    Histórico de um perfil específico — somente para funcionários (ou staff).
-    Ex.: /historico/perfil/3/
-    """
     perfil = get_object_or_404(PerfilCliente, pk=pk)
     alugueis = Aluguel.objects.filter(perfil_cliente=perfil).select_related('carro', 'funcionario').order_by('-data_inicio')
     return render(request, 'concessionaria/historico_cliente.html', {

@@ -19,7 +19,8 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from concessionaria.views import *
 from rest_framework.authtoken.views import obtain_auth_token
-from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView 
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
+
 router = DefaultRouter()
 router.register(r'user', UserViewSet)
 router.register(r'perfis-cliente', PerfilClienteViewSet)
@@ -29,9 +30,13 @@ router.register(r'alugueis', AluguelViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/token/',obtain_auth_token),
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'), 
-    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'), 
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'), 
+    path('api/token/', obtain_auth_token, name='api-token'),
+    path('api/me/alugueis/', AluguelViewSet.as_view({'get': 'me_alugueis'}), name='me-alugueis'),
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    path('historico/perfil/<int:pk>/', historico_perfil, name='historico-perfil'),
+    path('login/', login_cliente, name='login-cliente'),
+    path('historico/', historico_cliente, name='historico'),
 
 ]

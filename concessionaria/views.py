@@ -132,8 +132,14 @@ def login_cliente(request):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            login(request, user)  # cria sessão
+            login(request, user)  # cria sessão usuario
+            if user.is_staff or user.is_superuser:
+                return redirect('/admin/')
+
+            
             return redirect('historico-me')  # redireciona para o histórico do cliente
+        
+        
         else:
             return render(request, 'login.html', {"error": True})
 

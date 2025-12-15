@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'concessionaria',
     'rest_framework.authtoken',
     'drf_spectacular',
+    
 ]
 
 MIDDLEWARE = [

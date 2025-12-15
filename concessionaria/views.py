@@ -6,7 +6,7 @@ from django.contrib.auth.models import User, Group
 from .models import *
 from .serializers import *
 from .permissions import *
-from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.shortcuts import render, redirect, get_list_or_404
 from django.contrib.auth import authenticate, login
@@ -20,14 +20,14 @@ class UserViewSet(viewsets.ModelViewSet): # Lembret - Adm e funcionario criar cl
     permission_classes = [IsFuncionario]  
 
 
-class PerfilClienteViewSet(viewsets.ModelViewSet): # lembret - Funcionario CRUD, Cliente ver
+class   PerfilClienteViewSet(viewsets.ModelViewSet): # lembret - Funcionario CRUD, Cliente ver
     queryset = PerfilCliente.objects.all()
     serializer_class = PerfilClienteSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['user', 'cnh', 'telefone']
     def get_permissions(self):
         if self.action in ['retrieve', 'list']:
-            return [IsAuthenticatedOrReadOnly()]
+            return [IsAuthenticated()]
         return [IsFuncionario()]
 
     @action(detail=True, methods=['get'], permission_classes=[IsFuncionario])
@@ -58,7 +58,7 @@ class AluguelViewSet(viewsets.ModelViewSet): # lemnbrete -
     
     def get_permissions(self):
         if self.action in ['list', 'retrieve']:
-            return [IsAuthenticatedOrReadOnly()]
+            return [IsAuthenticated()]
         return [IsFuncionario()]
 
     @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated]) # Lembrete - usuario ver no perfil os alugueis
@@ -138,3 +138,6 @@ def login_cliente(request):
             return render(request, 'login.html', {"error": True})
 
     return render(request, 'login.html')
+
+
+
